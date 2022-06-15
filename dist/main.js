@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("comot for my front")})();

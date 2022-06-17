@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Page</title>
-</head>
+    <title>Restaurant</title>
+<script defer src="main.js"></script></head>
 <body>
     <header>
-        <div class="nav-tab">
-            <div class="tab" id="home-btn">Home</div>
-            <div class="tab" id="menu-btn">Menu</div>
-            <div class="tab" id="contact-btn">Contact</div>
-        </div>
+        <ul>
+            <li class="home">Home</li>
+            <li class="Menu">Menu</li>
+            <li class="Contact">Contact</li>
+        </ul>
+        <!--<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+        <button class="tablink" onclick="openPage('Menu', this, 'green')" id="defaultOpen">Menu</button>
+        <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+        <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>-->
     </header>
-    
     <div id="content"></div>
-    <script src="/dist/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

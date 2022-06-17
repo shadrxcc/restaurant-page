@@ -1,38 +1,13 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/generateJoke.js":
-/*!*****************************!*\
-  !*** ./src/generateJoke.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function openPage(pageName, elmnt, color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  tablinks = document.getElementsByClassName("tablink");
-
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-} // Get the element with id="defaultOpen" and click on it
+/***/ "./src/contactTab.js":
+/*!***************************!*\
+  !*** ./src/contactTab.js ***!
+  \***************************/
+/***/ (() => {
 
 
-document.getElementById("defaultOpen").click();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (openPage);
 
 /***/ }),
 
@@ -40,35 +15,9 @@ document.getElementById("defaultOpen").click();
 /*!**************************!*\
   !*** ./src/page-load.js ***!
   \**************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PageLoad": () => (/* binding */ PageLoad),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _assets_metallica_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/metallica.jpg */ "./src/assets/metallica.jpg");
 
-function PageLoad() {
-  var contentDiv = document.querySelector('#content');
-  var heading = document.createElement('h1');
-  heading.textContent = "Hello and welcome";
-  contentDiv.appendChild(heading);
-  var Metallica = document.getElementById('Metallica');
-  Metallica.classList.add('backgroundimg');
-  Metallica.src = _assets_metallica_jpg__WEBPACK_IMPORTED_MODULE_0__;
-  contentDiv.appendChild(Metallica);
-  var p1 = document.createElement('p');
-  p1.textContent = "An upscale restuarant uno";
-  contentDiv.appendChild(p1);
-  var p2 = document.createElement('p');
-  p1.textContent = "An upscale restuarant uno";
-  contentDiv.appendChild(p2);
-  var p3 = document.createElement('p');
-  p1.textContent = "An upscale restuarant uno";
-  contentDiv.appendChild(p3);
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (openPage);
 
 /***/ }),
 
@@ -78,6 +27,7 @@ function PageLoad() {
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -92,7 +42,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nbody {\n  background-color: #2fa8cc;\n  font-family: \"Roboto\", sans-serif;\n  height: 100vh;\n  overflow: hidden;\n  margin: 0;\n  padding: 20px;\n}\n\n.tablink {\n  background-color: #555;\n  color: white;\n  float: left;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  padding: 14px 16px;\n  font-size: 17px;\n  width: 25%;\n}\n\n.tablink:hover {\n  background-color: #777;\n}\n\n.tabcontent {\n  color: white;\n  display: none;\n  padding: 100px 20px;\n  height: 100%;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,sBAAA;AAJF;;AAOA;EACE,yBATc;EAUd,iCAAA;EACA,aAAA;EACA,gBAAA;EACA,SAAA;EACA,aAAA;AAJF;;AAOA;EACE,sBAAA;EACA,YAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,eAAA;EACA,kBAAA;EACA,eAAA;EACA,UAAA;AAJF;;AAOA;EACE,sBAAA;AAJF;;AAOA;EACE,YAAA;EACA,aAAA;EACA,mBAAA;EACA,YAAA;AAJF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background-color: $primary-color;\r\n  font-family: 'Roboto', sans-serif;\r\n  height: 100vh;\r\n  overflow: hidden;\r\n  margin: 0;\r\n  padding: 20px;\r\n}\r\n\r\n.tablink {\r\n  background-color: #555;\r\n  color: white;\r\n  float: left;\r\n  border: none;\r\n  outline: none;\r\n  cursor: pointer;\r\n  padding: 14px 16px;\r\n  font-size: 17px;\r\n  width: 25%;\r\n}\r\n\r\n.tablink:hover {\r\n  background-color: #777;\r\n}\r\n\r\n.tabcontent {\r\n  color: white;\r\n  display: none;\r\n  padding: 100px 20px;\r\n  height: 100%;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nbody {\n  background-color: #2fa8cc;\n  font-family: \"Roboto\", sans-serif;\n  height: 100vh;\n  overflow: hidden;\n  margin: 0;\n  padding: 20px;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,sBAAA;AAJF;;AAOA;EACE,yBATc;EAUd,iCAAA;EACA,aAAA;EACA,gBAAA;EACA,SAAA;EACA,aAAA;AAJF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background-color: $primary-color;\r\n  font-family: 'Roboto', sans-serif;\r\n  height: 100vh;\r\n  overflow: hidden;\r\n  margin: 0;\r\n  padding: 20px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -105,6 +55,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nb
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -216,6 +167,7 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -247,6 +199,7 @@ module.exports = function (item) {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -301,6 +254,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -414,6 +368,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -462,6 +417,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -482,6 +438,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -503,6 +460,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -582,6 +540,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -607,6 +566,7 @@ module.exports = styleTagTransform;
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 module.exports = __webpack_require__.p + "metallica [ext ]";
 
 /***/ })
@@ -717,23 +677,23 @@ module.exports = __webpack_require__.p + "metallica [ext ]";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _generateJoke__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./generateJoke */ "./src/generateJoke.js");
+/* harmony import */ var _contactTab__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contactTab */ "./src/contactTab.js");
+/* harmony import */ var _contactTab__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_contactTab__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 /* harmony import */ var _assets_metallica_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/metallica.jpg */ "./src/assets/metallica.jpg");
 /* harmony import */ var _page_load__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./page-load */ "./src/page-load.js");
+/* harmony import */ var _page_load__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_page_load__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
-var Metallica = document.getElementById('Metallica');
-Metallica.src = _assets_metallica_jpg__WEBPACK_IMPORTED_MODULE_2__;
-console.log(generateJoke());
 })();
 
 /******/ })()

@@ -7,6 +7,16 @@ ES6 and Webpack project practicing my knowledge of DOM manipulation by dynamical
 * Javascript
 * Webpack
 
+# Features
+
+## Home Tab
+![screenshot](./screenshot/home.jpg)
+
+## Menu Tab
+![screenshot](./screenshot/menu.jpg)
+
+## Contact Tab
+![screenshot](./screenshot/contact.png)
 # Demo
 [Live link](https://shadrxcc.github.io/restaurant-page/)
 

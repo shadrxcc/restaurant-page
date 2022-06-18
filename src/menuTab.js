@@ -1,63 +1,56 @@
-function menuTab() {
+import metallica from './assets/metallica.jpg'
+import jollof from './assets/jollof.jpg'
+import pancake from './assets/pancake.jpg'
+import grilledchicken from './assets/grilledchicken.jpg'
+
+function menuTab () {
     const content = document.querySelector('#content')
 
     const section = document.createElement('div')
-    section.classList.add('content-box')
-    section.setAttribute('id', 'menu')
+    section.classList.add('menu-tab')
 
-    const grid = document.createElement('div')
-    grid.classList.add('w-layout-grid')
-    grid.classList.add('grid')
-    section.appendChild(grid)
+    const menu1 = document.createElement('div')
+    const jollofRice = document.createElement('img')
+    jollofRice.classList.add('menu-img')
+    jollofRice.src = jollof
+    section.appendChild(jollofRice)
 
-    const menuCategories = (name) => {
-        const category = document.createElement('div')
-        category.classList.add('menu-category')
-        category.setAttribute('id', name)
-        grid.appendChild(category)
+    const para = document.createElement('h3')
+    para.textContent =  'Nigerian Jollof Rice'
+    section.appendChild(para)
 
-        function capitalizeFirstconstter(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1);
-        }
+    const sub = document.createElement('h3')
+    sub.textContent =  'N2,500'
+    section.appendChild(sub)
 
-        const h1 = document.createElement('h1')
-        h1.textContent = capitalizeFirstconstter(name)
-        category.appendChild(h1)
+    const grilledChicken = document.createElement('img')
+    grilledChicken.classList.add('menu-img')
+    grilledChicken.src = grilledchicken
+    section.appendChild(grilledChicken)
 
-        return category
-    }
+    const para1 = document.createElement('h3')
+    para1.textContent =  'Spicy Grilled Chicken'
+    section.appendChild(para1)
 
-    const starters = menuCategories('starters')
-    const mains = menuCategories('mains')
-    const desserts = menuCategories('desserts')
+    const sub1 = document.createElement('h3')
+    sub1.textContent =  'N4,500'
+    section.appendChild(sub1)
 
-    const menuItems = (name, price, category) => {
-        const item = document.createElement('div')
-        item.classList.add('menu-item')
+    const panCake = document.createElement('img')
+    panCake.classList.add('menu-img')
+    panCake.src = pancake
+    section.appendChild(panCake)
 
-        const itemName = document.createElement('div')
-        itemName.textContent = name
-        item.appendChild(itemName)
+    const para2 = document.createElement('h3')
+    para2.textContent =  'Spicy Grilled Chicken'
+    section.appendChild(para2)
 
-        const itemPrice = document.createElement('div')
-        itemPrice.textContent = price
-        item.appendChild(itemPrice)
+    const sub2 = document.createElement('h3')
+    sub2.textContent =  'N4,500'
+    section.appendChild(sub2)
 
-        category.appendChild(item)
-    };
-    
-    menuItems('Fries', '$4', starters)
-    menuItems('Beef loaded fries', '$6', starters)
-    menuItems('Veggie loaded fries', '$6', starters)
-    menuItems('Chicken nuggets', '$6', starters)
-    menuItems('Beef burger', '$12', mains)
-    menuItems('Chicken burger', '$12', mains)
-    menuItems('Mushroom burger', '$12', mains)
-    menuItems('Vegan burger', '$12', mains)
-    menuItems('Apple crumble', '$7', desserts)
-    menuItems('Lemon curd tart', '$7', desserts)
-    menuItems('Tiramisu', '$7', desserts)
-    menuItems('Deep fried icecream', '$7', desserts)
+
+    content.appendChild(section)
 
     content.appendChild(section)
 }

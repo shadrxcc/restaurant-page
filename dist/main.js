@@ -1,23 +1,143 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/contactTab.js":
 /*!***************************!*\
   !*** ./src/contactTab.js ***!
   \***************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function contactTab() {
+  var content = document.querySelector('#content');
+  var section = document.createElement('div');
+  var h1 = document.createElement('h1');
+  h1.textContent = "Contact Us";
+  h1.classList.add('contact');
+  section.appendChild(h1);
 
+  var contactDetails = function contactDetails(tag, link, anchorText) {
+    var div = document.createElement('div');
+    div.classList.add('contact-box');
+    div.textContent = "".concat(tag, ":");
+    var a = document.createElement('a');
+    a.classList.add('contact-link');
+    a.href = link;
+    a.textContent = anchorText;
+    div.appendChild(a);
+    section.appendChild(div);
+  };
+
+  contactDetails('Email', 'mailto:akaadesm@gmail.com', 'akaaadesm@gmail.com');
+  contactDetails('Github', 'connectto:github.com/shadrxcc', 'github.com/shadrxcc');
+  contactDetails('Twitter', 'twitter.com/shadrxcc', 'twitter.com/shadrxcc');
+  content.appendChild(section);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (contactTab);
 
 /***/ }),
 
-/***/ "./src/page-load.js":
-/*!**************************!*\
-  !*** ./src/page-load.js ***!
-  \**************************/
-/***/ (() => {
+/***/ "./src/homeTab.js":
+/*!************************!*\
+  !*** ./src/homeTab.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _assets_restaurant_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/restaurant.jpg */ "./src/assets/restaurant.jpg");
 
 
+function homeTab() {
+  var content = document.querySelector('#content');
+  content.replaceChildren();
+  var section = document.createElement('div');
+  section.classList.add('home');
+  var h1 = document.createElement('h1');
+  h1.textContent = 'EasyChow';
+  h1.classList.add('main');
+  section.appendChild(h1);
+  var landpage = document.createElement('img');
+  landpage.classList.add('home-img');
+  landpage.src = _assets_restaurant_jpg__WEBPACK_IMPORTED_MODULE_0__;
+  section.appendChild(landpage);
+  var h3 = document.createElement('h3');
+  h3.textContent = 'Established in 1880';
+  h3.classList.add('p');
+  section.appendChild(h3);
+  content.appendChild(section);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (homeTab);
+
+/***/ }),
+
+/***/ "./src/menuTab.js":
+/*!************************!*\
+  !*** ./src/menuTab.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _assets_metallica_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/metallica.jpg */ "./src/assets/metallica.jpg");
+/* harmony import */ var _assets_jollof_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/jollof.jpg */ "./src/assets/jollof.jpg");
+/* harmony import */ var _assets_pancake_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/pancake.jpg */ "./src/assets/pancake.jpg");
+/* harmony import */ var _assets_grilledchicken_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/grilledchicken.jpg */ "./src/assets/grilledchicken.jpg");
+
+
+
+
+
+function menuTab() {
+  var content = document.querySelector('#content');
+  var section = document.createElement('div');
+  section.classList.add('menu-tab');
+  var menu1 = document.createElement('div');
+  var jollofRice = document.createElement('img');
+  jollofRice.classList.add('menu-img');
+  jollofRice.src = _assets_jollof_jpg__WEBPACK_IMPORTED_MODULE_1__;
+  section.appendChild(jollofRice);
+  var para = document.createElement('h3');
+  para.textContent = 'Nigerian Jollof Rice';
+  section.appendChild(para);
+  var sub = document.createElement('h3');
+  sub.textContent = 'N2,500';
+  section.appendChild(sub);
+  var grilledChicken = document.createElement('img');
+  grilledChicken.classList.add('menu-img');
+  grilledChicken.src = _assets_grilledchicken_jpg__WEBPACK_IMPORTED_MODULE_3__;
+  section.appendChild(grilledChicken);
+  var para1 = document.createElement('h3');
+  para1.textContent = 'Spicy Grilled Chicken';
+  section.appendChild(para1);
+  var sub1 = document.createElement('h3');
+  sub1.textContent = 'N4,500';
+  section.appendChild(sub1);
+  var panCake = document.createElement('img');
+  panCake.classList.add('menu-img');
+  panCake.src = _assets_pancake_jpg__WEBPACK_IMPORTED_MODULE_2__;
+  section.appendChild(panCake);
+  var para2 = document.createElement('h3');
+  para2.textContent = 'Spicy Grilled Chicken';
+  section.appendChild(para2);
+  var sub2 = document.createElement('h3');
+  sub2.textContent = 'N4,500';
+  section.appendChild(sub2);
+  content.appendChild(section);
+  content.appendChild(section);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuTab);
 
 /***/ }),
 
@@ -27,7 +147,6 @@
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -36,13 +155,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../src/assets/grilledchicken.jpg */ "./src/assets/grilledchicken.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nbody {\n  background-color: #2fa8cc;\n  font-family: \"Roboto\", sans-serif;\n  height: 100vh;\n  overflow: hidden;\n  margin: 0;\n  padding: 20px;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,sBAAA;AAJF;;AAOA;EACE,yBATc;EAUd,iCAAA;EACA,aAAA;EACA,gBAAA;EACA,SAAA;EACA,aAAA;AAJF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background-color: $primary-color;\r\n  font-family: 'Roboto', sans-serif;\r\n  height: 100vh;\r\n  overflow: hidden;\r\n  margin: 0;\r\n  padding: 20px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: Montserrat, sans-serif;\n  color: #333;\n  font-size: 16px;\n  line-height: 22px;\n  background-color: aqua;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\nheader {\n  background-color: #fff;\n  color: black;\n  padding: 10px;\n  margin-bottom: 40px;\n  z-index: 1;\n}\n\n.main {\n  color: black;\n  font-family: \"Abril Fatface\", cursive;\n}\n\n.home {\n  margin: auto;\n  width: auto;\n  text-align: center;\n  background-color: #fff;\n  padding-top: 50px;\n  padding-bottom: 30px;\n}\n\n.nav {\n  display: flex;\n  justify-content: space-around;\n}\n\n.content-box {\n  width: 80%;\n  background-color: #fff;\n  text-align: center;\n}\n\n.contact-box {\n  background-color: #fff;\n  width: auto;\n  margin: auto;\n  margin-left: 80px;\n  margin-right: 80px;\n  text-align: center;\n}\n\n.contact {\n  text-align: center;\n}\n\n.menu-tab {\n  background-color: #fff;\n  width: auto;\n  margin: auto;\n  margin-left: 80px;\n  margin-right: 80px;\n  text-align: center;\n  border-radius: 20px;\n  padding-top: 50px;\n  padding-bottom: 30px;\n}\n\n.menu-img {\n  border-radius: 10px;\n}\n\n.contact-items {\n  padding-top: 20px;\n  padding-bottom: 20px;\n}\n\n.image {\n  width: 600px;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACE,mCAAA;EACA,WAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,yDAAA;AACF;;AAEA;EACE,sBAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,UAAA;AACF;;AAEA;EACE,YAAA;EACA,qCAAA;AACF;;AAEA;EACE,YAAA;EACA,WAAA;EACA,kBAAA;EACA,sBAAA;EACA,iBAAA;EACA,oBAAA;AACF;;AAEA;EACE,aAAA;EACA,6BAAA;AACF;;AAEA;EACE,UAAA;EACA,sBAAA;EACA,kBAAA;AACF;;AAEA;EACE,sBAAA;EACA,WAAA;EACA,YAAA;EACA,iBAAA;EACA,kBAAA;EACA,kBAAA;AACF;;AAEA;EACE,kBAAA;AACF;;AAEA;EACE,sBAAA;EACA,WAAA;EACA,YAAA;EACA,iBAAA;EACA,kBAAA;EACA,kBAAA;EACA,mBAAA;EACA,iBAAA;EACA,oBAAA;AACF;;AAEA;EACE,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,oBAAA;AACF;;AAEA;EACE,YAAA;AACF","sourcesContent":["body {\r\n  font-family: Montserrat, sans-serif;\r\n  color: #333;\r\n  font-size: 16px;\r\n  line-height: 22px;\r\n  background-color: aqua;\r\n  background-image: url(/src/assets/grilledchicken.jpg);\r\n}\r\n\r\nheader {\r\n  background-color: #fff;\r\n  color: black;\r\n  padding: 10px;\r\n  margin-bottom: 40px;\r\n  z-index: 1;\r\n}\r\n\r\n.main {\r\n  color: black;\r\n  font-family: 'Abril Fatface', cursive;\r\n}\r\n\r\n.home {\r\n  margin: auto;\r\n  width: auto;\r\n  text-align: center;\r\n  background-color: #fff;\r\n  padding-top: 50px;\r\n  padding-bottom: 30px;\r\n}\r\n\r\n.nav {\r\n  display: flex;\r\n  justify-content: space-around;\r\n}\r\n\r\n.content-box {\r\n  width: 80%;\r\n  background-color: #fff;\r\n  text-align: center;\r\n}\r\n\r\n.contact-box {\r\n  background-color: #fff;\r\n  width: auto;\r\n  margin: auto;\r\n  margin-left: 80px;\r\n  margin-right: 80px;\r\n  text-align: center;\r\n}\r\n\r\n.contact {\r\n  text-align: center;\r\n}\r\n\r\n.menu-tab {\r\n  background-color: #fff;\r\n  width: auto;\r\n  margin: auto;\r\n  margin-left: 80px;\r\n  margin-right: 80px;\r\n  text-align: center;\r\n  border-radius: 20px;\r\n  padding-top: 50px;\r\n  padding-bottom: 30px;\r\n}\r\n\r\n.menu-img {\r\n  border-radius: 10px;\r\n}\r\n\r\n.contact-items {\r\n  padding-top: 20px;\r\n  padding-bottom: 20px;\r\n}\r\n\r\n.image {\r\n  width: 600px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -55,7 +178,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nb
   \*****************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /*
@@ -161,13 +283,50 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+
+  if (!url) {
+    return url;
+  }
+
+  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them
+
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/runtime/sourceMaps.js":
 /*!************************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
   \************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 module.exports = function (item) {
@@ -199,7 +358,6 @@ module.exports = function (item) {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -254,7 +412,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var stylesInDOM = [];
@@ -368,7 +525,6 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var memo = {};
@@ -417,7 +573,6 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -438,7 +593,6 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -460,7 +614,6 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -540,7 +693,6 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -560,14 +712,63 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/assets/avatar.jpg":
+/*!*******************************!*\
+  !*** ./src/assets/avatar.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "avatar [ext ]";
+
+/***/ }),
+
+/***/ "./src/assets/grilledchicken.jpg":
+/*!***************************************!*\
+  !*** ./src/assets/grilledchicken.jpg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "grilledchicken [ext ]";
+
+/***/ }),
+
+/***/ "./src/assets/jollof.jpg":
+/*!*******************************!*\
+  !*** ./src/assets/jollof.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "jollof [ext ]";
+
+/***/ }),
+
 /***/ "./src/assets/metallica.jpg":
 /*!**********************************!*\
   !*** ./src/assets/metallica.jpg ***!
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "metallica [ext ]";
+
+/***/ }),
+
+/***/ "./src/assets/pancake.jpg":
+/*!********************************!*\
+  !*** ./src/assets/pancake.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "pancake [ext ]";
+
+/***/ }),
+
+/***/ "./src/assets/restaurant.jpg":
+/*!***********************************!*\
+  !*** ./src/assets/restaurant.jpg ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "restaurant [ext ]";
 
 /***/ })
 
@@ -596,6 +797,9 @@ module.exports = __webpack_require__.p + "metallica [ext ]";
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -670,6 +874,32 @@ module.exports = __webpack_require__.p + "metallica [ext ]";
 /******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -677,23 +907,54 @@ module.exports = __webpack_require__.p + "metallica [ext ]";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contactTab__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contactTab */ "./src/contactTab.js");
-/* harmony import */ var _contactTab__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_contactTab__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _assets_metallica_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/metallica.jpg */ "./src/assets/metallica.jpg");
-/* harmony import */ var _page_load__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./page-load */ "./src/page-load.js");
-/* harmony import */ var _page_load__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_page_load__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _assets_metallica_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/metallica.jpg */ "./src/assets/metallica.jpg");
+/* harmony import */ var _assets_jollof_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/jollof.jpg */ "./src/assets/jollof.jpg");
+/* harmony import */ var _assets_pancake_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/pancake.jpg */ "./src/assets/pancake.jpg");
+/* harmony import */ var _assets_grilledchicken_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/grilledchicken.jpg */ "./src/assets/grilledchicken.jpg");
+/* harmony import */ var _assets_restaurant_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/restaurant.jpg */ "./src/assets/restaurant.jpg");
+/* harmony import */ var _assets_avatar_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/avatar.jpg */ "./src/assets/avatar.jpg");
+/* harmony import */ var _homeTab__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./homeTab */ "./src/homeTab.js");
+/* harmony import */ var _contactTab__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./contactTab */ "./src/contactTab.js");
+/* harmony import */ var _menuTab__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./menuTab */ "./src/menuTab.js");
 
 
 
 
+
+
+
+
+
+
+(0,_homeTab__WEBPACK_IMPORTED_MODULE_7__["default"])();
+
+function clearContent() {
+  content.innerHTML = '';
+}
+
+var content = document.querySelector('#content');
+var homeBtn = document.querySelector('#home-btn');
+var menuBtn = document.querySelector('#menu-btn');
+var contactBtn = document.querySelector('#contact-btn');
+homeBtn.addEventListener('click', function () {
+  clearContent();
+  (0,_homeTab__WEBPACK_IMPORTED_MODULE_7__["default"])();
+});
+menuBtn.addEventListener('click', function () {
+  clearContent();
+  (0,_menuTab__WEBPACK_IMPORTED_MODULE_9__["default"])();
+});
+contactBtn.addEventListener('click', function () {
+  clearContent();
+  (0,_contactTab__WEBPACK_IMPORTED_MODULE_8__["default"])();
+});
 })();
 
 /******/ })()

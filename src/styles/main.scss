@@ -1,0 +1,115 @@
+body {
+  font-family: Montserrat, sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: aqua;
+  background-image: url(/src/assets/grilledchicken.jpg);
+}
+
+header {
+  background-color: #fff;
+  color: black;
+  padding: 10px;
+  margin-bottom: 40px;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.main {
+  color: black;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.home {
+  margin: auto;
+  width: auto;
+  text-align: center;
+  background-color: #fff;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.content-box {
+  width: 80%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact-box {
+  background-color: #fff;
+  width: auto;
+  margin: auto;
+  margin-left: 80px;
+  margin-right: 80px;
+  text-align: center;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.wrap {
+  margin: auto;
+  width: auto;
+}
+
+.profile {
+  border-radius: 250px;
+  width: 20%;
+  height: 20%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact {
+  text-align: center;
+  color: #fff;
+}
+
+.menu-tab {
+  background-color: #fff;
+  width: auto;
+  margin: auto;
+  margin-left: 80px;
+  margin-right: 80px;
+  text-align: center;
+  border-radius: 20px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.menu-img {
+  border-radius: 10px;
+}
+
+.contact-items {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.image {
+  width: 600px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: aqua;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-img {
+    width: 80%;
+  }
+}
